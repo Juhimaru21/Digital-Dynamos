@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    
+    <title>EventHub Registration</title>
+</head>
+<body>
+  <div class="heading">
+    <h1> <marquee width="100%" direction="right" height="100px" behaviour="alternate">EVENTS</marquee></marquee></h1></div>
+    
+    <div class="login-page">
+     
+      <h2 class="content">Enter your login credentials</h2>
+        <div class="form">
+          <form class="register-form">
+            <input type="text" placeholder="name" />
+            <input type="password" placeholder="password"/>
+            <input type="text" placeholder="email address"/>
+            <button>create</button>
+            <p class="message">Already registered? <a href="#">Sign In</a></p>
+          </form>
+          <form class="login-form" id="loginForm">
+            <input type="text" placeholder="username" id="name"/>
+            <input type="password" id="password" placeholder="password"/>
+            <button onclick="func(event)">login</button>
+            <p class="message">Not registered? <a href="#" style="text-decoration:none;">Create an account</a></p>
+            
+          </form>
+        </div>
+      </div>
+      <script>
+       function func(event){
+         event.preventDefault(); // prevent default form submission
+         
+         var name=document.getElementById("name").value;
+         var pas=document.getElementById("password").value;
+         
+         if(name=='juhimaru21' && pas=='juhi1960%'){
+           alert("login successful");
+           window.location.assign("index2.html");
+         }
+         else{
+           alert("Enter again");
+         }
+       }
+      </script>   
+   </body>
+   </html>
